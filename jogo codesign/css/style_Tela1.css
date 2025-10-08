@@ -1,0 +1,158 @@
+/* WeTalk — Tela "Palavra adicionada" */
+/* Unidades: rem / % / vw (sem px) */
+
+:root{
+  /* Paleta oficial */
+  --matiz-1: #FFFBE6;      /* fundo */
+  --matiz-1-alt: #DFDFB3;  /* variação suave */
+  --matiz-2: #00AAFF;      /* interface/botões (base) */
+  --matiz-2-dark: #0080B3; /* interface/botões (contorno) */
+  --matiz-3: #00B300;      /* cabeçalho */
+  --black: #000000;
+  --white: #ffffff;
+
+  font-size: 100%;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  background: var(--matiz-1);                 /* Matiz 1: fundo */
+  color: var(--black);
+  font-family: "Baloo 2", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Moldura da imagem sem cortar o conteúdo */
+.content{
+  /* ocupa o espaço entre o h1 (topo) e o footer (base) */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;                  /* centro vertical */
+  gap: 1rem;
+  padding: 2rem 1rem 0;                     /* empurra um pouco p/ baixo */
+  min-block-size: calc(100dvh - 9rem);      /* garante “miolo” central */
+}
+
+h2{
+  font-family: "Baloo 2", system-ui;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 6vw, 2.25rem);
+  text-align: center;
+  margin: 0 1rem 0.75rem;                   /* sem margin-top grande */
+}
+
+/* Moldura (quadro azul) vira o wrapper e NÃO o <img> */
+.image-frame{
+  width: min(85vw, 32.5rem);
+  margin: 0.5rem auto 1.5rem;
+  padding: 0.5rem;
+  border: 0.25rem solid var(--matiz-2-dark);
+  border-radius: 1.25rem;
+  background: var(--white);
+  box-shadow:
+    0 0.375rem 0 var(--matiz-2),
+    0 0.75rem 1.5rem rgba(0,0,0,.08);
+  display: grid;
+  place-items: center;             /* centraliza a imagem dentro do quadro */
+}
+
+/* Deixa o QUADRO (moldura) só no wrapper .image-frame */
+/* Remove qualquer moldura do <img> */
+.image-frame img{
+  display: block;
+  max-width: 100%;
+  max-height: 60dvh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  /* remove a 2ª moldura */
+  border: 0 ;
+  border-radius: 0 ;
+  padding: 0 ;
+  box-shadow: none ;
+  background: transparent ;
+}
+
+
+
+/* Cabeçalho (faixa) — Matiz 3 */
+h1{
+  font-family: "Lilita One", system-ui;
+  font-weight: 400;          
+  font-size: clamp(1.5rem, 6vw, 2.125rem);
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  color: var(--white);
+  background: var(--matiz-3);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,.06);
+}
+
+p{ margin: 0; }
+
+/* Moldura da imagem (como no sketch) */
+p > img{
+  display: block;
+  width: min(85vw, 32.5rem);
+  aspect-ratio: 1 / 1;                        /* quadrado */
+  object-fit: cover;
+  background: var(--white);
+  border: 0.25rem solid var(--matiz-2-dark);  /* contorno Matiz 2 escura */
+  border-radius: 1.25rem;
+  padding: 0.5rem;                            /* moldura interna */
+  margin: 0.5rem auto 1.5rem;                 /* espaçamentos do desenho */
+  box-shadow:
+    0 0.375rem 0 var(--matiz-2),              /* base Matiz 2 clara */
+    0 0.75rem 1.5rem rgba(0,0,0,.08);
+}
+
+/* Footer + botão/seta inferior esquerdo */
+footer{
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 1rem 1.25rem;
+}
+footer p{ margin: 0; }
+
+footer a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem; 
+  height: 3.5rem;
+  border-radius: 0.875rem;
+  background: var(--matiz-2);
+  border: 0.1875rem solid var(--matiz-2-dark);
+  box-shadow: 0 0.25rem 0 rgba(0,0,0,.10);
+  text-decoration: none;
+  transition: transform .05s ease-in-out, filter .15s ease;
+  overflow: hidden;                 /* NOVO: evita “sair” do botão */
+}
+
+footer a:hover{ filter: brightness(1.03); }
+footer a:active{ transform: translateY(0.125rem); }
+
+footer a img{
+  display: block;
+  height: 60%;                      /* NOVO: preserva proporção */
+  width: auto;                      /* NOVO */
+  object-fit: contain;              /* NOVO */
+  mix-blend-mode: multiply;         /* NOVO: disfarça o fundo branco do JPG */
+  border-radius: 0.5rem;            /* opcional: arredonda cantos do JPG */
+}
+
+
+.section-alt{ background: var(--matiz-1-alt); }
+
