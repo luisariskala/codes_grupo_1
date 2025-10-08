@@ -1,0 +1,90 @@
+/* ----- CABEÇALHO ----- */
+header {
+    /* altura */
+    height: 15%;           
+    /* Disposição dos filhos */
+    display: flex;           
+    justify-content: center; 
+    align-items: center;     
+    /* fundo */
+    background-color: #00B300; 
+}
+
+.title {
+    /* fonte */
+    font-family: 'Sigmar', sans-serif;
+    color: #FFFBE6;
+    font-size: 4vw;
+    margin: 0;
+}
+
+/* ----- CONTEÚDO PRINCIPAL ----- */
+main {
+    /* altura */
+    min-height: 100%;          
+    /* Disposição dos filhos */
+    display: flex;  
+    flex-direction: column;         
+    justify-content: flex-start; 
+    align-items: center;     
+    gap: 3%; 
+    /* fundo */
+    background-color: #FFFBE6; 
+    padding: 3% 2%;
+    box-sizing: border-box;
+}
+
+/* Botões e textos centrais */
+.button {
+    background-color: #DFDFB3;
+    color: black;
+    font-family: "Lilita One", sans-serif;
+    font-size: 2.5vw;
+    text-align: center;
+    border: 0.4vw solid black;
+    border-radius: 1vw;
+    padding: 1.5% 4%;
+    text-decoration: none;
+    box-shadow: 0 0.5vw 0.8vw rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+    width: 80%;
+    max-width: 500px;
+}
+
+.button:hover {
+    background-color: #008BCA;
+    transform: scale(1.05);
+}
+
+/* Imagem da joia */
+img[alt="joia"] {
+    width: 30%;
+    max-width: 300px;
+    margin: 3% 0 5%;
+    display: block;
+    margin-top: auto;
+}
+
+/* ----- RODAPÉ ----- */
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00B300; 
+    z-index: 10;
+}
+
+footer img {
+    width: 80%;
+    max-width: 60px;
+    transition: transform 0.2s;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
