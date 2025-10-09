@@ -168,3 +168,22 @@ footer img{
   mix-blend-mode: multiply;
   border-radius: 0.5rem;
 }
+
+/* ============================== */
+/* COLUNAS */
+/* ============================== */
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
