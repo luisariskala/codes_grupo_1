@@ -1,0 +1,170 @@
+/* ============================== */
+/* VARIÁVEIS GLOBAIS E BASE */
+/* ============================== */
+:root{
+  --matiz-1: #FFFBE6;
+  --matiz-1-alt: #DFDFB3;
+  --matiz-2: #00AAFF;
+  --matiz-2-dark: #0080B3;
+  --matiz-3: #00B300;
+  --black: #000;
+  --white: #fff;
+  font-size: 100%;
+}
+
+/* ============================== */
+/* ESTRUTURA GERAL */
+/* ============================== */
+*{ box-sizing: border-box; }
+html, body{ height: 100%; margin: 0; padding: 0; }
+
+body{
+  background: var(--matiz-1);
+  color: var(--black);
+  font-family: "Lilita One", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================== */
+/* CABEÇALHO */
+/* ============================== */
+header{
+  background: var(--matiz-3);
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  color: var(--matiz-1);
+  font-family: "Sigmar", sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* ============================== */
+/* CONTEÚDO PRINCIPAL */
+/* ============================== */
+main{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* ============================== */
+/* CONTAINER DE COLUNAS */
+/* ============================== */
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  max-width: 900px;
+}
+
+.left-col, .right-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* ============================== */
+/* RÓTULOS */
+/* ============================== */
+.label {
+  background: #DFDFB3;
+  border: 0.15rem solid var(--black);
+  border-radius: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.label:hover {
+  background-color: var(--matiz-3);
+  color: var(--white);
+  transform: scale(1.03);
+}
+
+/* ============================== */
+/* PLAYERS DE ÁUDIO */
+/* ============================== */
+audio{
+  width: 220px;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0 rgba(0,0,0,.1);
+}
+
+/* ============================== */
+/* BOTÃO FINALIZAR */
+/* ============================== */
+.finalizar{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  background: #DFDFB3;
+  color: var(--black);
+  border: 0.15rem solid var(--black);
+  border-radius: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--matiz-3);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+/* ============================== */
+/* RODAPÉ */
+/* ============================== */
+footer{
+  background: var(--matiz-3);
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1.25rem;
+  padding-bottom: 0.75rem;
+  box-sizing: border-box;
+}
+
+footer a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.875rem;
+  background: var(--matiz-2);
+  border: 0.1875rem solid var(--matiz-2-dark);
+  box-shadow: 0 0.25rem 0 rgba(0,0,0,.10);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+footer img{
+  display: block;
+  height: 60%;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  border-radius: 0.5rem;
+}

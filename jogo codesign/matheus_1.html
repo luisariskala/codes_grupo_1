@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head> 
-        <title>WeTalk</title> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/reset.css"> <link rel="stylesheet" href="css/style_matheus_1.css"> 
-    </head>
-    <body>
-        <!-- superior -->
-        <header>
-            <h1>PRATICAR</h1>
-        </header>
-        <!-- principal -->
-        <main>
-            <!-- colunas (dimensionar via CSS)-->
-            <ul>
-                <li>Eu</li>
-                <li>Onde</li>
-                <li>Quem</li>
-                <li>meu</li>
-            </ul>
-            <ul>
-                <li><audio src="audio/p_eu.mp3" controls></audio></li>
-                <li><audio src="audio/p_onde.mp3" controls></audio></li>
-                <li><audio src="audio/p_quem.mp3" controls></audio></li>
-                <li><audio src="audio/p_meu.mp3" controls></audio></li>
-            </ul>
-            <a href="matheus_2.html"> FINALIZAR </a>
-        </main>
-        <!-- inferior -->
-        <footer>
-            <a href="tela_2_mylena.html"> <img src="img/seta_azul.png" alt="botão de voltar" > </a>
-        </footer>
-    </body>
+
+<head> 
+    <title>WeTalk — Praticar</title> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importação dos arquivos de reset e estilo principal -->
+    <link rel="stylesheet" href="css/reset.css"> 
+    <link rel="stylesheet" href="css/style_matheus_1.css"> 
+
+    <!-- Importação das fontes utilizadas no projeto -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Lilita+One&family=Sigmar&display=swap');
+    </style>
+</head>
+
+<body>
+  <!-- ===== CABEÇALHO ===== -->
+  <!-- Exibe o título principal da página, identificando a seção de prática -->
+  <header>
+    <h1 class="title">PRATICAR</h1>
+  </header>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main>
+    <!-- Seção principal com duas colunas: textos e áudios correspondentes -->
+    <section class="container">
+      <!-- Coluna da esquerda: rótulos dos exercícios -->
+      <div class="left-col">
+        <p class="label">Eu</p>
+        <p class="label">Onde</p>
+        <p class="label">Quem</p>
+        <p class="label">Meu</p>
+      </div>
+
+      <!-- Coluna da direita: players de áudio para cada expressão -->
+      <div class="right-col">
+        <audio src="audio/p_eu.mp3" controls preload="none"></audio>
+        <audio src="audio/p_onde.mp3" controls preload="none"></audio>
+        <audio src="audio/p_quem.mp3" controls preload="none"></audio>
+        <audio src="audio/p_meu.mp3" controls preload="none"></audio>
+      </div>
+    </section>
+
+    <!-- Botão para encerrar a prática e seguir para a próxima tela -->
+    <div class="finalizar">
+      <a href="matheus_2.html" class="button">FINALIZAR</a>
+    </div>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <!-- Botão de navegação para retornar à tela anterior -->
+  <footer>
+    <a href="tela_2_mylena.html">
+      <img src="img/seta_azul.png" alt="Voltar">
+    </a>
+  </footer>
+</body>
 </html>
