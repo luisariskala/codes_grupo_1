@@ -1,0 +1,147 @@
+:root {
+  --matiz-1: #FFFBE6;        /* fundo principal (creme) */
+  --matiz-2: #00AAFF;        /* azul (seta azul) */
+  --matiz-2-dark: #0080B3;   /* azul escuro */
+  --matiz-3: #00B300;        /* verde (barras) */
+  --black: #000000;
+  --white: #ffffff;
+  font-size: 100%;
+}
+
+/* reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+ }
+
+body {
+  background: var(--matiz-1);
+  color: var(--black);
+  font-family: "Baloo 2", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/*  topo fixo  */
+h1 {
+  background: var(--matiz-3);
+  color: var(--white);
+  font-family: "Lilita One", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom: 0.25rem solid #007d00;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+/*  conteúdo central */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 6rem; /* espaço pro h1 fixo */
+  padding-bottom: 6rem; /* espaço pro rodapé fixo */
+  overflow: hidden; 
+}
+
+/*cartão central (figure)  */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* moldura do coqueiro (contorno preto + bege + imagem dentro) */
+.moldura-preta {
+  background: #000;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+  box-shadow: 0 0.5rem 0 rgba(0,0,0,0.15);
+}
+
+.moldura-bege {
+  background: #e6e4b8;
+  border-radius: 1rem;
+  padding: 0.6rem;
+}
+
+.moldura-bege img {
+  width: 13.5rem;
+  height: 15.5rem;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 0.75rem;
+  display: block;
+}
+
+/* nome do objeto  */
+h2 {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--black);
+}
+
+/* imagem do som  */
+img[src*="codigo_de_som"] {
+  width: 14rem;
+  height: auto;
+  border-radius: 1rem;
+  padding: 0.4rem 0.6rem;
+  background: linear-gradient(180deg, #ffffff, #f3ecd2);
+  border: 0.2rem solid #e0d7b3;
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.15);
+}
+
+/*  rodapé fixo  */
+.botoes-inferiores {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 360px;
+  background: var(--matiz-3);
+  border-top: 0.25rem solid #007d00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  height: 5rem;
+  z-index: 10;
+  box-shadow: 0 -0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+/* imagens dos botões  */
+.botoes-inferiores img {
+  height: 3.2rem;
+  width: auto;
+  cursor: pointer;
+}
+
+/* botão central (sair) */
+.botao-centro img {
+  transform: scale(0.8);
+  transform-origin: center;
+}
+
+
