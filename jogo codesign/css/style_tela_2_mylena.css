@@ -180,21 +180,11 @@ footer{
   background: var(--matiz-3);
   height: 10vh;
   display: flex;
-<<<<<<< HEAD
   justify-content: flex-start;
   align-items: center;
   padding-left: 1.25rem;
   padding-bottom: 0.75rem;
   box-sizing: border-box;
-=======
-  align-items: center;
-  justify-content: flex-end;
-  padding-left: 1rem;
-  position: fixed; /* fica parado no fim da tela */
-  bottom: 0;
-  left: 0;
-  right: 0;
->>>>>>> be52531844d555a6c09dcc1322467af938096b7e
 }
 
 footer a{
