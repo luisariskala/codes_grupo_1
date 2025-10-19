@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Lilita+One&display=swap');
+
+
+:root{
+  --matiz-1: #FFFBE6;      
+  --matiz-1-alt: #DFDFB3; 
+  --matiz-2: #00AAFF;      
+  --matiz-2-dark: #0080B3; 
+  --matiz-3: #00B300;      
+  --black: #000000;
+  --white: #ffffff;
+
+  font-size: 100%;
+}
+
+
+header {
+    background-color: var(--matiz-1);
+    height: 10rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--matiz-1);
+    height: 25rem;
+}
+
+.imagem {
+    height: 5rem;
+    width: 5rem;
+}
+
+.som {
+    width: 7rem;
+    height: 5rem;
+}
+
+h1 {
+    font-family: "Baloo 2", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+footer {
+    position: relative;
+    background-color: var(--matiz-1-alt);
+    height: 7rem;
+}
+
+.seta {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+}
+
+
