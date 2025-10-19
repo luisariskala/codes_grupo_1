@@ -122,7 +122,7 @@ footer {
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding-left: 1rem;
   position: fixed; /* fica parado no fim da tela */
   bottom: 0;
