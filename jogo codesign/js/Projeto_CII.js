@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (!button) return;
       button.style.transition = "transform 0.1s ease";
       button.addEventListener("mousedown", () => {
-        button.style.transform = "scale(0.93)";
+        button.style.transform = "scale(0.8)";
       });
       button.addEventListener("mouseup", () => {
         button.style.transform = "";
@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
         button.style.transform = "";
       });
       button.addEventListener("touchstart", () => {
-        button.style.transform = "scale(0.93)";
+        button.style.transform = "scale(0.8)";
       });
       button.addEventListener("touchend", () => {
         button.style.transform = "";
