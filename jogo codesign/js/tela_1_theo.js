@@ -59,12 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (clone.tagName == 'IMG') {
                 clone.style.height = '2.5rem'
                 clone.style.width = '2.5rem'
-                textofinal.push({type : 'img' , value: clone.src, alt: clone.alt})
+                textofinal.push(String(clone.alt || '').toUpperCase().trim())
             } else {
-                textofinal.push({type: 'pal', value: clone.innerHTML})
+                textofinal.push(String(clone.textContent || '').trim())
             }
-
-            
             destino.appendChild(clone)
 
             itemsendoarrastado = null
