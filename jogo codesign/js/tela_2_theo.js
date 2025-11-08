@@ -1,21 +1,17 @@
-// document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 
 
-//     texto = document.querySelector('.textotela2')
-//     section = document.querySelector('section')
+    const texto = document.querySelector('.textotela2')
 
-//     console.log(localStorage.getItem('textofinal'))
+    const stored = localStorage.getItem('textofinal')
+    if (!stored) {
+        texto.innerHTML = ''
+        return;
+    }
 
-//     for (elem of localStorage.getItem('textofinal')) {
-//         if (elem.type == 'img') {
-//             texto.innerHTML += elem.value.toUpperCase()
-//             imagem = document.createElement('img')
-//             imagem.src = elem.alt 
-//             section.appendChild(imagem)  
-//         } else {
-//             texto.innerHTML += elem[0]
-//         }
-//     }
+    const partes = stored.split(',').filter(p => p !== '')
+    const frase = partes.join(' ')
+    texto.innerHTML = frase
 
 
 
@@ -36,4 +32,4 @@
 
 
 
-// })
+})
