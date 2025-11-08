@@ -87,13 +87,7 @@ main{
   padding: 0.8rem 1.5rem;
   font-size: 1.4rem;
   box-shadow: 0 0.375rem 0.5rem rgba(0, 0, 0, 0.2); /* 6px 8px */
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.label:hover {
-  background-color: var(--matiz-3);
-  color: var(--white);
-  transform: scale(1.03);
+  transition: all 0.15s ease-in-out;
 }
 
 /* ============================== */
@@ -186,4 +180,42 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+/* ============================== */
+/* LÓGICA JAVA-SCRIPT */
+/* ============================== */
+.label.selecionado {
+  background-color: var(--matiz-3);
+  color: var(--white);
+  transform: scale(1.03);
+}
+
+audio.selecionado {
+  outline: 3px solid var(--matiz-3);
+  transform: scale(1.03);
+  box-shadow: 0 0.25rem 0 var(--matiz-3);
+}
+
+.label.pareado, audio.pareado {
+  background-color: #bdbdbd;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+a.desativado {
+  pointer-events: none;   /* impede clique/toque */
+  opacity: 0.6;           /* opcional: deixa visualmente “inativo” */
+  cursor: default;        /* cursor normal */
+}
+
+a.desativado {
+  pointer-events: none;   
+  opacity: 0.6;           
+  cursor: default;        
+}
+
+a.ativado {
+  pointer-events: auto;
+  transform: scale(1.03);
 }

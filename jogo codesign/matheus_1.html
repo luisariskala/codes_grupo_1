@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head> 
     <title>WeTalk — Praticar</title> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Importação dos arquivos de reset e estilo principal -->
     <link rel="stylesheet" href="css/reset.css"> 
     <link rel="stylesheet" href="css/style_matheus_1.css"> 
-
+    <script src="js/matheus_1.js"></script>
     <!-- Importação das fontes utilizadas no projeto -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Lilita+One&family=Sigmar&display=swap');
@@ -29,26 +27,26 @@
     <!-- Seção principal com lista de textos e áudios -->
   <ul class="audio-list">
     <li>
-      <p class="label">Eu</p>
-      <audio src="audio/p_eu.mp3" controls preload="none"></audio>
+      <p class="label" data-palavra="eu">Eu</p>
+      <audio src="audio/p_eu.mp3" controls preload="none" class="ativo" data-palavra="eu"></audio>
     </li>
     <li>
-      <p class="label">Onde</p>
-      <audio src="audio/p_onde.mp3" controls preload="none"></audio>
+      <p class="label" data-palavra="onde">Onde</p>
+      <audio src="audio/p_onde.mp3" controls preload="none" class="ativo" data-palavra="onde"></audio>
     </li>
     <li>
-      <p class="label">Quem</p>
-      <audio src="audio/p_quem.mp3" controls preload="none"></audio>
+      <p class="label" data-palavra="quem">Quem</p>
+      <audio src="audio/p_quem.mp3" controls preload="none" class="ativo" data-palavra="quem"></audio>
     </li>
     <li>
-      <p class="label">Meu</p>
-      <audio src="audio/p_meu.mp3" controls preload="none"></audio>
+      <p class="label" data-palavra="meu">Meu</p>
+      <audio src="audio/p_meu.mp3" controls preload="none" class="ativo" data-palavra="meu"></audio>
     </li>
   </ul>
 
     <!-- Botão para encerrar a prática e seguir para a próxima tela -->
     <div class="finalizar">
-      <a href="matheus_2.html" class="button">FINALIZAR</a>
+      <a href="matheus_2.html" class="button desativado">FINALIZAR</a>
     </div>
 
   </main>
