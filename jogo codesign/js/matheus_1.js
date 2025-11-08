@@ -76,14 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 cont_pontos++
                 // debug
                 console.log(cont_pontos)
-                // ativa botão de finalizar
-                if(cont_pares == gab_pares){
-                    localStorage.setItem("pontos", cont_pontos)
-                    finalizar.classList.remove('desativado')
-                    finalizar.classList.add('ativado')
-
-                }
             }
-        }
+            // ativa botão de finalizar
+            if(cont_pares == gab_pares){
+                localStorage.setItem("pontos", cont_pontos)
+                finalizar.classList.remove('desativado')
+                finalizar.classList.add('ativado')
+
+            }
+            }
     }
 })
