@@ -15,4 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
         botao.style.transform = 'scale(1)';
       });
     });
+    const botaoAdicionar = document.querySelector(".btn-add");
+    const imagemPreview = document.querySelector(".preview");
+
+    botaoAdicionar.addEventListener("click", (event) => {
+      event.preventDefault(); 
+      imagemPreview.src = "img/imagem_gato.jpg"; 
+    });
 });
