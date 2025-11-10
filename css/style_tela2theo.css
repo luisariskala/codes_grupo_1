@@ -45,11 +45,12 @@ h1 {
     font-weight: bold;
     color: black;
     font-size: 2rem;
+    text-align: center;
 }
 
 footer {
     position: relative;
-    background-color: var(--matiz-1-alt);
+    background-color: var(--white);
     height: 7rem;
 }
 
