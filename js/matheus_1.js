@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var cont_pontos = 0
     var cont_pares = 0
     var gab_pares = texto.length
+    localStorage.setItem("pontos", 0)
 
     // Seleção texto
     for(t of texto){

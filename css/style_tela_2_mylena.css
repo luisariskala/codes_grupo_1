@@ -209,3 +209,45 @@ footer img{
   mix-blend-mode: multiply;
   border-radius: 0.5rem;
 }
+
+/* ============================== */
+/* LÓGICA JAVA-SCRIPT (versão imagens e áudios) */
+/* ============================== */
+
+.thumb img.selecionado {
+  outline: 3px solid var(--matiz-3);
+  border-radius: 0.5rem;
+  transform: scale(1.03);
+  transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+audio.selecionado {
+  outline: 3px solid var(--matiz-3);
+  transform: scale(1.03);
+  box-shadow: 0 0.25rem 0 var(--matiz-3);
+  transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+.thumb img.pareado,
+audio.pareado {
+  opacity: 0.7;
+  filter: grayscale(60%);
+  pointer-events: none;
+}
+
+/* ============================== */
+/* BOTÃO FINALIZAR */
+/* ============================== */
+
+a.desativado {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: default;
+  transition: opacity 0.3s ease;
+}
+
+a.ativado {
+  pointer-events: auto;
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
