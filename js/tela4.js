@@ -21,5 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     botaoAdicionar.addEventListener("click", (event) => {
       event.preventDefault(); 
       imagemPreview.src = "img/imagem_gato.jpg"; 
+      imagemPreview.style.maxWidth = "60%";
+      imagemPreview.style.height = "auto";
     });
 });
