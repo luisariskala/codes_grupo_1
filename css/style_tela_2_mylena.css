@@ -180,7 +180,7 @@ footer{
   background: var(--matiz-3);
   height: 10vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   padding-left: 1.25rem;
   padding-bottom: 0.75rem;
@@ -208,6 +208,10 @@ footer img{
   object-fit: contain;
   mix-blend-mode: multiply;
   border-radius: 0.5rem;
+}
+
+.footer-home img:hover {
+    transform: scale(1.08);
 }
 
 /* ============================== */
