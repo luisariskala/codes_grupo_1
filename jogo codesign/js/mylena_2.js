@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {  
     // Seleção de elemtnos
-    var texto = document.querySelectorAll(".label")
+    var texto = document.querySelectorAll(".thumb > img")
     var audio = document.querySelectorAll("audio")
     var finalizar = document.querySelector(".finalizar a")
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const [tipoAnterior, dataAnterior, elementoAnterior] = historico
 
         // --- mesmo tipo ---
-        if (tipo === tipoAnterior) {
+        if (tipo == tipoAnterior) {
             // mesma palavra --> desmarca
             if (data === dataAnterior) {
             elemento.classList.remove('selecionado');
