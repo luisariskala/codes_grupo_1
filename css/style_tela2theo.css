@@ -49,17 +49,27 @@ h1 {
 }
 
 footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     background-color: var(--white);
     height: 7rem;
 }
 
+.menu {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
 .seta {
     height: 5rem;
     width: 5rem;
-    position: absolute;
+    /* position: absolute;
     left: 1rem;
-    bottom: 1rem;
+    bottom: 1rem; */
 }
 
 
